@@ -1,10 +1,10 @@
 import './App.css'
-
+import SideNav from './components/SideNav'
 function App() {
   
   return (
     <>
-     <h1 className='text-red-400 '>Hey</h1>
+     <SideNav/>
     </>
   )
 }
