@@ -1,6 +1,6 @@
 import Bank from "../../assets/images/bank.png";
 import Gradient from "../../assets/images/gradient.png";
-
+import { FaLongArrowAltRight } from "react-icons/fa";
 const ProgressBar = ({ percentage }) => {
   return (
     <div
@@ -42,8 +42,8 @@ const Card1 = () => {
               Open your RazorpayX account.
             </p>
             <p className="text-[0.8rem] text-zinc-400 mb-4">
-              Don't let bankache come in your growth. Apply for Razort pay
-              account with few basic details.
+              Don't let bankache come in your growth. Apply for Razorpay account
+              with few basic details.
             </p>
             <div className="flex  gap-2 mb-4">
               <ProgressBar percentage={40} />
@@ -52,8 +52,8 @@ const Card1 = () => {
               <ProgressBar percentage={0} />
             </div>
             <div className="flex items-center justify-between">
-              <button className="px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white w-fit text-[0.8rem] rounded-sm">
-                Start Application
+              <button className="px-2 py-1 bg-blue-600 flex items-center gap-2 hover:bg-blue-700 text-white w-fit text-[0.8rem] rounded-sm">
+                Start Application <FaLongArrowAltRight/>
               </button>
               <p className="text-zinc-400 text-[0.8rem]">0/4</p>
             </div>
