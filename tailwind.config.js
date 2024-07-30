@@ -12,7 +12,7 @@ export default {
         hoverColor: "#2e353f",
       },
       fontSize:{
-        navFont:"0.88rem"
+        navFont:"0.8rem"
       }
     },
   },
