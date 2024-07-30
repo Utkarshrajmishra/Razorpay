@@ -83,23 +83,23 @@ const SideNav = () => {
               >
                 <a
                   href={item.href}
-                  className="flex ml-2 gap-3 text-navFont font-Popins items-center"
+                  className="flex items-center gap-3 text-navFont font-Popins"
                 >
                   {item.icon}
                   <div className="flex flex-col gap-1">
-                    <span className="flex items-center">{item.label}</span>
-                    {item.subText && (
-                      <span className="flex items-center gap-1 text-[0.8rem]">
-                        {item.badge && (
-                          <span
-                            className={`text-[0.67rem] h-4 flex items-center px-2 w-fit rounded-xl ${item.badgeColor} text-white`}
-                          >
-                            {item.badge}
-                          </span>
-                        )}
-                        <span className={item.subTextColor}>
-                          {item.subText}
+                    <div className="flex items-center">
+                      <span>{item.label}</span>
+                      {item.badge && (
+                        <span
+                          className={`ml-2 text-[0.67rem] h-4 flex items-center px-2 w-fit rounded-xl ${item.badgeColor} text-white`}
+                        >
+                          {item.badge}
                         </span>
+                      )}
+                    </div>
+                    {item.subText && (
+                      <span className={`text-[0.8rem] ${item.subTextColor}`}>
+                        {item.subText}
                       </span>
                     )}
                   </div>
