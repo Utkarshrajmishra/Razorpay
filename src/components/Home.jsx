@@ -5,12 +5,20 @@ import { FiRefreshCcw } from "react-icons/fi";
 import RazorPayXLogo from "../assets/images/Xlogo.png";
 import Card1 from "./Cards/Card1";
 import Card2 from "./Cards/Card2";
+import Card3 from "./Cards/Card3";
+import { FaAngleDown } from "react-icons/fa6";
+import Card4 from "./Cards/Card4";
+
 const Home = () => {
   return (
     <div className="flex-1 h-screen bg-secondaryColor font-Popins overflow-y-scroll overflow-x-hidden">
       <section className="flex gap-4 items-center justify-end p-4">
-        <button className="text-[0.8rem] text-white py-1 px-4 bg-blue-500">
-          PAYOUT
+        <button className="flex items-center justify-center text-[0.8rem] text-white py-1 gap-2 px-4 bg-blue-500 hover:bg-blue-600">
+          <span className="flex-1 text-center">+ PAYOUT</span>
+          <div className="flex items-center gap-2">
+            <div className="h-6 border-r border-zinc-400"></div>
+            <FaAngleDown className="text-white" />
+          </div>
         </button>
         <IoSearchOutline fontSize={18} color="#2563eb" />
         <PiSpeakerHigh fontSize={18} color="#eab308" />
@@ -30,7 +38,7 @@ const Home = () => {
           </div>
           <div>
             <div className="flex items-center font-Popins md:w-[62%] w-[80%] justify-between ml-2 mt-2">
-              <p className=" text-zinc-400 font-Popins flex items-center text-md ">
+              <p className=" text-zinc-400 font-Popins flex items-end text-md ">
                 <span className="font-semibold">₹</span>
                 <span className="text-xl font-semibold text-white">100</span>.09
               </p>
@@ -50,11 +58,18 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <p className="text-sm text-zinc-200 font-semibold mt-8">Onboarding updates <span className="text-zinc-400 text-[0.8rem] font-light">(1)</span></p>
+              <p className="text-sm text-zinc-200 font-semibold mt-8">
+                Onboarding updates{" "}
+                <span className="text-zinc-400 text-[0.8rem] font-light">
+                  (1)
+                </span>
+              </p>
             </div>
             <div>
-              <Card1/>
-              <Card2/>
+              <Card1 />
+              <Card2 />
+              <Card3 />
+              <Card4 />
             </div>
           </div>
         </div>

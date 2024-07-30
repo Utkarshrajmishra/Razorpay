@@ -52,7 +52,7 @@ const Card1 = () => {
               <ProgressBar percentage={0} />
             </div>
             <div className="flex items-center justify-between">
-              <button className="px-2 py-1 bg-blue-500 text-white w-fit text-[0.8rem] rounded-sm">
+              <button className="px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white w-fit text-[0.8rem] rounded-sm">
                 Start Application
               </button>
               <p className="text-zinc-400 text-[0.8rem]">0/4</p>
