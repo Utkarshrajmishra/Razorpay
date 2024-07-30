@@ -16,6 +16,7 @@ const menuItems = [
   { label: "Payouts", icon: <GoArrowUpRight />, href: "#" },
   { label: "Account Statement", icon: <GrNotes />, href: "#" },
   { label: "Contacts", icon: <RxPerson />, href: "#" },
+  { label: "Divider" }, // Placeholder for the horizontal line
   {
     label: "Loans",
     icon: <MdOutlineCurrencyRupee />,
@@ -76,37 +77,47 @@ const SideNav = () => {
             <img src={Logo} alt="razorpay logo" width={120} />
           </div>
           <ul className="text-zinc-400 flex flex-col gap-3">
-            {menuItems.map((item, index) => (
-              <li
-                key={index}
-                className="group relative hover:text-zinc-100 hover:bg-hoverColor p-2"
-              >
-                <a
-                  href={item.href}
-                  className="flex items-center gap-3 text-navFont font-Popins"
+            {menuItems.map((item, index) => {
+              if (item.label === "Divider") {
+                return (
+                  <div
+                    key={index}
+                    className="bg-hoverColor h-[1px] w-full mt-3"
+                  />
+                );
+              }
+              return (
+                <li
+                  key={index}
+                  className="group relative hover:text-zinc-100 hover:bg-hoverColor p-2"
                 >
-                  {item.icon}
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-center">
-                      <span>{item.label}</span>
-                      {item.badge && (
-                        <span
-                          className={`ml-2 text-[0.67rem] h-4 flex items-center px-2 w-fit rounded-xl ${item.badgeColor} text-white`}
-                        >
-                          {item.badge}
+                  <a
+                    href={item.href}
+                    className="flex items-center gap-3 text-navFont font-Popins"
+                  >
+                    {item.icon}
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center">
+                        <span>{item.label}</span>
+                        {item.badge && (
+                          <span
+                            className={`ml-2 text-[0.67rem] h-4 flex items-center px-2 w-fit rounded-xl ${item.badgeColor} text-white`}
+                          >
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
+                      {item.subText && (
+                        <span className={`text-[0.8rem] ${item.subTextColor}`}>
+                          {item.subText}
                         </span>
                       )}
                     </div>
-                    {item.subText && (
-                      <span className={`text-[0.8rem] ${item.subTextColor}`}>
-                        {item.subText}
-                      </span>
-                    )}
-                  </div>
-                </a>
-                <span className="absolute top-0 left-0 h-full w-[3px] bg-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 rounded-r"></span>
-              </li>
-            ))}
+                  </a>
+                  <span className="absolute top-0 left-0 h-full w-[3px] bg-green-300 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 rounded-r"></span>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </nav>
